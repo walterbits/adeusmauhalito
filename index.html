@@ -16,6 +16,19 @@
 
 <div id="viewer-count" style="background-image: url(2.png); text-align: center; color: white; font-size: 1.1em; padding: 1em;"></div>
 
+<!-- UTM -->
+    <script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
+
 <!-- script do topo DA PAGINA QUE FALA QUANDO SAIRA DO AR O VIDEO -->
 <script>
   let viewerCount = 400;
